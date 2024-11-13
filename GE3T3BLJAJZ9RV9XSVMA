@@ -1,0 +1,56 @@
+// $Id: Auriq Systems Inc. MyDataTag:aqobj 9.2.1 $
+(function(){
+  var i, a, k, s, u, v, w, c=location, d=document, z=aqobj;
+  if (!z) return;
+  w=new Date(); z.M=w.getTime(); w.setFullYear(w.getFullYear()+2);
+  z.S=/#aq(\d+)_([^#]+)/;
+  if (v=c.hash.match(z.S)){
+    s=c.hash.replace(z.S, "");
+    if (history.replaceState) history.replaceState({}, d.title, c.pathname+c.search+s); else c.hash=s;
+    v=(z.M>=(j=Number(v[1]))&&z.M<j+300000)?v[2]:"";
+  }
+  z.V=v||"";
+  if (!(u=v=localStorage.aqusr)){
+    v=(d.cookie.match(/(^|; ?)aqusr=([^;]+)/)||[])[2]||z.V||"MYDATA01_2DYZFPC9U36TAQAFMFCF";
+    try { u=localStorage.aqusr=v; } catch(w){}
+  }
+  k="aqusr=__"; w=v+"; expires="+w.toUTCString()+"; path=/; domain=";
+  a=c.hostname.split('.'); if ((i=a.length)>1) --i;
+  while (i){
+    s=w+a.slice(--i).join('.'); d.cookie=k+s;
+    if (d.cookie.indexOf(k)>=0){ d.cookie="aqusr="+s; u=v; break; }
+  }
+  z.U=u||"";
+  z.I=new Image(1, 1);
+  z.X=function(a){
+    var s, l=a.length, j=0, i=1, d=document, p=d.URL, z=this;
+    if (a[0]=="tag"||(a[0]=="tag_cat"&&(i=2))||(a[0]=="tag_file"&&(i=3))) j++;
+    s="https://"+z.p[1]+"/tagx/"+z.M+++z.f.fg+"/"+z.a+"?1="+z.U+"&12="+z.V;
+    if (i==2&&j<l) p+=(p.indexOf("?")<0?"?":"&")+a[j++];
+    s+="&2="+encodeURIComponent(p);
+    if (i!=3) p=d.referrer; else if (j<l) s+="&3="+encodeURIComponent(a[j++]);
+    if (p) s+="&4="+encodeURIComponent(p);
+    while (j<l) if (p=a[j++]) s+="&101="+encodeURIComponent(p);
+    j=(i=window.innerWidth)?window.innerHeight:
+       ((p=d.documentElement)&&(i=p.clientWidth))?p.clientHeight:
+       ((p=d.body)&&(i=p.clientWidth))?p.clientHeight:(i="");
+    s+="&8=PROTO="+location.protocol.slice(0,-1)+"&8=TITLE="+encodeURIComponent(d.title)+"&8=RES_W="+screen.width+"&8=RES_H="+screen.height+"&8=WIN_W="+i+"&8=WIN_H="+j;
+    z.I.src=s;
+  };
+  z.L=function(){
+    var d=document, z=aqobj, a=z.A, v=z.f.ln, u, s, e, h, i, j;
+    s="#aq"+Date.now()+"_"+z.U;
+    for (i=0, e=d.links; i<e.length; ++i){
+      if ((h=e[i].href)&&(a.href=h)&&(u=a.hostname)!=c.hostname) for (j=0; j<v.length; ++j) if (u==v[j]){ e[i].href=h.replace(z.S, "")+s; break; }
+    }
+    for (i=0, e=d.forms; i<e.length; ++i){
+      if ((h=e[i].action)&&(a.href=h)&&(u=a.hostname)!=c.hostname) for (j=0; j<v.length; ++j) if (u==v[j]){ e[i].action=h.replace(z.S, "")+s; break; }
+    }
+  };
+  z.tag=function(){ this.X(arguments); };
+  if (z.f.fg.indexOf("N")<0) z.tag();
+  while (z.q.length) z.X(z.q.shift());
+  if ((v=z.f.ln)&&v.length&&z.U){
+    z.A=d.createElement("a"); z.L(); setInterval(z.L, 256000);
+  }
+})();
