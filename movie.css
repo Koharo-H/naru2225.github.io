@@ -51,7 +51,7 @@ html {
 }
 body {
 	font-family: "游明朝体", "Yu Mincho", YuMincho, "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
-	font-size: min(3.4vw, 16px);
+	font-size: min(3.4vw, 20px);
 	line-height: 1.8;
   letter-spacing: 0.05em;
 	-webkit-text-size-adjust: 100%;
@@ -613,10 +613,10 @@ section h2 {
     padding-top: min(4vw, 20px);
   }
   .scheduleList dd p {
-    font-size: min(3vw, 14px);
+    font-size: min(3vw, 15px);
   }
   .scheduleList dd .open {
-    font-size: min(3.4vw, 16px);
+    font-size: min(3.4vw, 20px);
   }
   
   .siteTop {
@@ -690,7 +690,7 @@ section h2 {
   margin-bottom: min(4vw, 20px);
 }
 .boxWrap h4 {
-  font-size: min(3.4vw, 16px);
+  font-size: min(3.4vw, 220px);
   font-weight: 600;
   line-height: 1.4;
   margin: min(6vw, 30px) 0 min(2vw, 10px);
