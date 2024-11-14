@@ -641,7 +641,7 @@ section h2 {
   font-size: min(3.8vw, 20px);
   letter-spacing: 0.08em;
   text-align: center;
-  margin-bottom: min(3vw, 15px);
+  margin-bottom: min(3vw, 20px);
 }
 .attention ul {
   list-style: disc;
@@ -649,7 +649,7 @@ section h2 {
   margin-bottom: min(4vw, 20px);
 }
 .attention p + p {
-  margin-top: min(3vw, 15px);
+  margin-top: min(3vw, 20px);
 }
 .attention a {
   color: #fff;
