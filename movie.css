@@ -203,7 +203,7 @@ section h2 {
   transform: rotate(0deg);
 }
 .scheduleList dt .date {
-  font-size: min(3.4vw, 16px);
+  font-size: min(3.4vw, 20px);
   line-height: 1.4;
   margin-bottom: min(3vw, 15px);
 }
@@ -216,7 +216,7 @@ section h2 {
 }
 .scheduleList dd {
   display: none;
-  padding-top: min(2vw, 10px);
+  padding-top: min(2vw, 15px);
   padding-bottom: min(4vw, 20px);
 }
 .scheduleList dd a {
@@ -224,7 +224,7 @@ section h2 {
   text-decoration: underline;
 }
 .scheduleList dd p + p {
-  margin-top: min(3vw, 15px);
+  margin-top: min(3vw, 20px);
 }
 
 .siteTop {
@@ -274,7 +274,7 @@ section h2 {
     padding-top: min(4vw, 20px);
   }
   .scheduleList dd p {
-    font-size: min(3vw, 15px);
+    font-size: min(3vw, 20px);
   }
   .scheduleList dd .open {
     font-size: min(3.4vw, 20px);
@@ -312,7 +312,7 @@ section h2 {
   margin: min(6vw, 30px) 0 min(2vw, 10px);
 }
 .boxWrap p {
-  margin-bottom: min(4vw, 20px);
+  margin-bottom: min(4vw, 25px);
 }
 
 .boxWrap a {
@@ -330,7 +330,7 @@ section h2 {
   border: #fff solid 1px;
   padding: min(10vw, 80px) min(6vw, 30px);
   text-align: center;
-  font-size: min(3.8vw, 20px);
+  font-size: min(3.8vw, 25px);
 }
 
 .lineMarker {
@@ -350,7 +350,7 @@ section h2 {
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: min(3.4vw, 16px);
+  font-size: min(3.4vw, 20px);
   color: #000;
   line-height: 1.7;
   text-align: center;
@@ -373,7 +373,7 @@ section h2 {
   color: #000;
   text-decoration: none;
   padding: min(3vw, 15px);
-  font-size: min(3.6vw, 18px);
+  font-size: min(3.6vw, 20px);
 }
 
 @media screen and (min-width: 821px) {
